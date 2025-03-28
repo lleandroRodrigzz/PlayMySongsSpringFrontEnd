@@ -8,14 +8,14 @@ export default function MusicList() {
     useEffect(() => {
         async function fetchSongs() {
             try {
-                const endpoint = busca.trim() === "" ? "/musics" : `/find_musics?termo=${busca}`;
+                const endpoint = busca.trim() === "" ? "/musics" : `/find_musics?termo=${encodeURIComponent(busca)}`;
                 const response = await fetch(`http://localhost:8080${endpoint}`);
                 if (response.ok) {
                     const data = await response.json();
                     setSongs(data);
-                } else {
+                }
+                else {
                     setSongs([]);
-                    toast.error("Nenhuma música encontrada.");
                 }
             }
             catch (err) {

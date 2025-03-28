@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
+import {Upload} from "lucide-react";
 
 export default function MusicUploadForm() {
   const [formData, setFormData] = useState({
@@ -45,7 +46,12 @@ export default function MusicUploadForm() {
         <h2>Registrar Música</h2>
         <form onSubmit={handleSubmit} className="upload-form">
           <label>Arquivo</label>
-          <input type="file" name="file" onChange={handleChange} required className="upload-input" />
+          <label htmlFor="file-upload" className="custom-file-upload">
+            <Upload size={20} />
+            Enviar arquivo
+          </label>
+          <input id="file-upload" type="file" name="file" onChange={handleChange} />
+
 
           <label>Estilo Musical</label>
           <select name="estilo" onChange={handleChange} required className="upload-input">

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Upload, List } from 'lucide-react';
 import Logo from "../assets/spring.svg";
+import {toast} from "react-hot-toast";
 
-export default function Navbar({ usuario, setTela }) {
+toast.success("Bem-vindo Visitante! :)")
+export default function Navbar({ setTela }) {
     return (
         <nav className="navbar">
             <div className="navbar-left">
@@ -10,7 +12,7 @@ export default function Navbar({ usuario, setTela }) {
                 <span className="navbar-title">Play My Songs - <span style={{color:"#6DB33F"}}>Spring Edition</span></span>
             </div>
             <div className="navbar-right">
-                <span className="navbar-welcome">Bem-vindo, {usuario?.nome || 'Usuário'}</span>
+                <span className="navbar-welcome">Bem-vindo, {'Visitante'}</span>
                 <button onClick={() => setTela('upload')} className="navbar-button">
                     <Upload className="navbar-button-icon" /> Registrar
                 </button>

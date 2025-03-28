@@ -258,3 +258,47 @@ body {
     border-color: var(--spotify-green);
     box-shadow: 0 0 5px var(--spotify-green);
 }
+
+/* Estilizar controles de áudio */
+audio::-webkit-media-controls-panel {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    filter: invert(100%) grayscale(100%);
+}
+audio::-webkit-media-controls-timeline {
+    filter: invert(80%) grayscale(100%);
+}
+
+audio {
+    filter: grayscale(100%);
+}
+
+/* Botão personalizado para arquivo */
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #181818;
+    color: #ffffff;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #343434;
+    font-size: 14px;
+    font-family: sans-serif;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #282828;
+}
