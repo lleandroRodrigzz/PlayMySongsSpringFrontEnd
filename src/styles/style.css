@@ -1,0 +1,260 @@
+/* style.css - todos os estilos integrados */
+
+:root {
+    --spotify-green: #1DB954;
+    --spotify-dark: #121212;
+    --spotify-light: #282828;
+    --spotify-text: #b3b3b3;
+    --spotify-white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--spotify-dark);
+    color: var(--spotify-white);
+}
+
+/* LOGIN */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--spotify-dark);
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--spotify-light);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.login-header h2 {
+    color: var(--spotify-white);
+    margin: 10px 0 0;
+}
+
+.login-header p {
+    color: var(--spotify-text);
+    font-size: 14px;
+}
+
+.login-icon {
+    height: 48px;
+    width: 48px;
+    color: var(--spotify-green);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--spotify-text);
+    background-color: var(--spotify-dark);
+    color: var(--spotify-white);
+}
+
+.login-button {
+    padding: 10px;
+    background-color: var(--spotify-green);
+    color: var(--spotify-dark);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-button:hover {
+    background-color: #1aa34a;
+}
+
+.login-error {
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--spotify-light);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-icon {
+    height: 32px;
+    width: 32px;
+    color: var(--spotify-green);
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--spotify-white);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-welcome {
+    color: var(--spotify-text);
+}
+
+.navbar-button {
+    background-color: transparent;
+    color: var(--spotify-white);
+    border: 1px solid var(--spotify-green);
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navbar-button:hover {
+    background-color: var(--spotify-green);
+    color: var(--spotify-dark);
+}
+
+/* UPLOAD */
+.upload-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--spotify-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.upload-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--spotify-text);
+    background-color: var(--spotify-dark);
+    color: var(--spotify-white);
+}
+
+.upload-button {
+    padding: 10px;
+    background-color: var(--spotify-green);
+    color: var(--spotify-dark);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #1aa34a;
+}
+
+/* LISTAGEM */
+.list-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.song-card {
+    background-color: var(--spotify-light);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.song-card:hover {
+    background-color: #333;
+}
+
+.song-card h3 {
+    margin: 0;
+    color: var(--spotify-white);
+}
+
+.song-card p {
+    color: var(--spotify-text);
+    margin: 4px 0;
+}
+
+.audio-player {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.no-songs {
+    text-align: center;
+    color: var(--spotify-text);
+    margin-top: 20px;
+}
+
+/* Estilização da barra de busca */
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid var(--spotify-text);
+    border-radius: 25px;
+    background-color: var(--spotify-dark);
+    color: var(--spotify-white);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.search-bar::placeholder {
+    color: var(--spotify-text);
+}
+
+.search-bar:focus {
+    border-color: var(--spotify-green);
+    box-shadow: 0 0 5px var(--spotify-green);
+}
